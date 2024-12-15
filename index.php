@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = eval("return $current;");
             $history .= $current . ' = ' . $result . PHP_EOL;
             $current = $result;
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             $current = 'Error';
         }
     } else {
